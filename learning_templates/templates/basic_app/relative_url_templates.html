@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WELCOME TO RELATIVE URL TEMPLATES</h1>
+    <!--  the basic_app here matches the name you gave in the urls.py file under the basic_app folder -->
+    <!-- the other matches up the view you want -->
+    <a href="{% url 'basic_app:other' %}">THE OTHER PAGE</a>
+    <!-- make sure the  'basic_app:other' has no spaces like ' basic_app:other' 
+    this or 'basic_app:other ' this is a very common bug, if this happens it cant find the name-->
+    <!-- (17:00) this is how we would add the admin page as an anchor tag -->
+    <a href="{% url 'admin:index' %}">LINK TO ADMIN</a>
+    <!-- how to get to the index page -->
+    <a href="{% url 'index' %}">LINK TO INDEX!</a>
+    
+</body>
+</html>
